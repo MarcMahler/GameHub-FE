@@ -1,0 +1,11 @@
+.nav {
+    background-color: #a9cafa;
+    color: black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
