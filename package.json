@@ -1,0 +1,23 @@
+{
+  "name": "gamehub-fullstack",
+  "version": "1.0.0",
+  "description": "GameHub - Full stack application with games like tic-tac-toe, chess, etc.",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:db\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd gamehub-FE && npm run dev",
+    "dev:backend": "cd gamehub-BE && npm run dev",
+    "dev:db": "mongod --dbpath ./mongodb-data --port 27017",
+    "install:all": "npm install && cd gamehub-FE && npm install && cd ../gamehub-BE && npm install",
+    "build": "cd gamehub-FE && npm run build",
+    "start": "concurrently \"npm run start:db\" \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd gamehub-FE && npm start",
+    "start:backend": "cd gamehub-BE && npm start",
+    "start:db": "mongod --dbpath ./mongodb-data --port 27017"
+  },
+  "keywords": ["gamehub", "games", "fullstack", "nextjs", "nodejs", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
