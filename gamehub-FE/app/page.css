@@ -1,9 +1,12 @@
-.page {
+body {
     background-color: #ccf0fb;
-    height: 100vh;
-    width: 100vw;
+}
+.main {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
