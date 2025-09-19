@@ -161,7 +161,11 @@ a.secondary {
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+    .logo {
+        filter: invert();
+        height: 300px;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }

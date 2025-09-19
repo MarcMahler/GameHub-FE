@@ -7,10 +7,10 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src="/tictac.png"
           alt="Next.js logo"
-          width={180}
-          height={38}
+          width={280}
+          height={250}
           priority
         />
         <ol>
