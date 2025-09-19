@@ -17,9 +17,25 @@ mongoose.connect(MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+// Routes
+const userRoutes = require('./routes/users');
+const gameRoutes = require('./routes/games');
+const adminRoutes = require('./routes/admin');
+
+app.use('/api/users', userRoutes);
+app.use('/api/games', gameRoutes);
+app.use('/api/admin/database', adminRoutes);
+
 // Basic route
 app.get('/', (req, res) => {
-  res.json({ message: 'GameHub Backend API is running!' });
+  res.json({ 
+    message: 'GameHub Backend API is running!',
+    endpoints: {
+      users: '/api/users',
+      games: '/api/games',
+      health: '/health'
+    }
+  });
 });
 
 // Health check route
